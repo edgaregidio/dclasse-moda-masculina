@@ -49,7 +49,7 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="quemsomos.html">Quem Somos</a>
           </li>
           <li class="nav-item">
@@ -58,7 +58,7 @@
           <li class="nav-item">
             <a class="nav-link" href="contato.html">Contato</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="colecoes.html">Coleções</a>
           </li>
         </ul>
@@ -70,27 +70,19 @@
 
   <section class="container-history">
 
-    <div class="header-history">
-      <h2>Quem Somos!</h2>
-    </div>
+    <img id="myImg" src="img/fotos/fotom1.jpeg" alt="Snow" style="width:100%;max-width:300px">
 
-    <div class="content">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-      <div class="row">
-        <div class="text-history col-lg-8">
-          <h2>Dclasse Moda Masculina</h2>
-          <p>
-            Estamos no mercado de vestuário desde o ano de 2005
-            na produção,de camisaria, oferecendo uma ampla variedade
-            p público masculino com destaque na moda social.
-          </p>
-        </div>
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
 
-        <div class="img-card-history col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img src="img/fotos/fotom1.jpeg" />
-        </div>
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
 
-      </div>
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
     </div>
   </section>
 
@@ -174,8 +166,9 @@
     </div>
   </footer>
 
-
-
 </body>
+
+<!-- MODAL IMAGENS -->
+<script src="js/modalImagem.js"></script>
 
 </html>
