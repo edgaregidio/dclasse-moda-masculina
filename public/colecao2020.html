@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/index.js"></script>
 </head>
 
 <!-- BOOTSTRAP -->
@@ -82,24 +83,58 @@
 
   <!-- Seção 1 QUEM SOMOS -->
 
-  <section class="container-colection">
-
-    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
-    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
-    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
-    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-      <!-- The Close Button -->
+  <div class="top-colectio">
+    <h1>COLEÇÃO 2020</h1>
+  </div>
+  <section class="container-who" id="containerPhotos">
+    <img class="img-gallery" src="img/modelimg/fotom1.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom2.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom3.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom4.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom5.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom6.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom7.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom8.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom9.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom10.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom11.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom12.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom13.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom14.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom15.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom16.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom17.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom18.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom19.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom20.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom21.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom22.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom23.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom24.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom25.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom26.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom27.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom28.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom29.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom30.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom31.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom32.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom33.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom34.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom35.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom36.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom37.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom38.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom39.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom40.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom41.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom42.jpeg" onclick="openModal(this)">
+    <img class="img-gallery" src="img/modelimg/fotom43.jpeg" onclick="openModal(this)">
+    <div id="modalImage" class="modal">
+      <img class="modal-content" id="contentImgModal">
       <span class="close">&times;</span>
-
-      <!-- Modal Content (The Image) -->
-      <img class="modal-content" id="img01">
-
-      <!-- Modal Caption (Image Text) -->
-      <div id="caption"></div>
+      <a class="prev" onclick="prevImage(event)">&#10094;</a>
+      <a class="next" onclick="nextImage(event)">&#10095;</a>
     </div>
   </section>
 
