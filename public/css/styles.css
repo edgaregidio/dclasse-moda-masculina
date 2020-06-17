@@ -85,6 +85,10 @@ body {
   align-items: center;
 }
 
+.carousel-caption a {
+  text-decoration: none;
+}
+
 .carousel-caption a p {
   display: flex;
   justify-content: center;
@@ -95,7 +99,13 @@ body {
   color: #FFF;
   border-radius: 35px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.carousel-caption a p:hover {
+  border: 2px solid #90181B;
+  background-color: #DDD;
+  color: #90181B;
 }
 
 /* Seção 2 */
