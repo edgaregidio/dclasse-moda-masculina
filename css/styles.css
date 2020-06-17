@@ -32,11 +32,18 @@ body {
   padding: 0 40px;
 }
 .navbar .collapse .navbar-nav li {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .navbar .collapse .navbar-nav li a {
   font-size: 20px;
+}
+
+.navbar .collapse .navbar-nav li a:hover {
+  color: #FFF;
+  background: #444;
+  border-radius: 8px;
+  opacity: 80%;
 }
 
 /* seção 1 */
@@ -71,6 +78,7 @@ body {
   align-items: center;
   width: 100%;
   height: auto;
+  margin: 50px 0 50px;
 }
 
 .container-objective .content {
@@ -78,14 +86,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .container-objective .topic-objective {
   text-align: center;
   font-size: 45px;
   font-weight: 300;
-  padding: 40px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
 .container-objective .row {
@@ -155,6 +164,8 @@ body {
 
 .container-photos .row  .lbox .box-img {
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .container-photos .row  .lbox .box-img img {
@@ -229,14 +240,18 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 350px;
   justify-content: center;
   align-items: center;
-  margin: 100px 0 50px;
+  margin: 120px 0 100px;
 }
 
 .card-img-social img{
   width: 100%;
   transition: 0.2s;
+}
+.card-img-social img:hover {
+  width: 110%;
 }
 
 .card-img-social p{
@@ -254,7 +269,7 @@ body {
 }
 
 .container-social .content .row .btn-insta-social:hover {
-  background: #999;
+  background: #90181b;
   color: #FFF;
   font-weight: 300;
 }

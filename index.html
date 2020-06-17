@@ -11,7 +11,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <!-- ANIMAÇÕES -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
+<!-- BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -32,8 +42,7 @@
 
   <!-- Cabeçalho Site -->
   <header class="header_area">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #90181b;">
       <div class="img-header">
         <img class="" src="img/logo.png" alt="">
         <!-- <img class="img-fluid w-100" src="img/logotop.png" alt=""> -->
@@ -55,11 +64,17 @@
           <li class="nav-item">
             <a class="nav-link" href="cadastro.html">Cadastro Revenda</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contato.html">Contato</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Coleções
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="colecoes2020.html">Coleção 2020</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="colecoes.html">Coleções</a>
+            <a class="nav-link" href="contato.html">Contato</a>
           </li>
         </ul>
       </div>
@@ -81,8 +96,8 @@
         <div class="carousel-item active">
           <img src="img/banner.png" class="d-block w-100" alt="foto1">
           <div class="carousel-caption d-none d-md-block">
-            <h2>Title 1</h2>
-            <h1>Esse aqui é um teste para ver como ficará o site!</h1>
+            <h2>DClasse Moda Masculina</h2>
+            <h1>Confira todas as nossa coleções 2020!</h1>
             <a href="https://www.instagram.com/dclassemodamasculina/" target="_blank">Correr no instagram</a>
           </div>
         </div>
@@ -101,7 +116,8 @@
           <div class="carousel-caption d-none d-md-block">
             <h2>Title 1</h2>
             <h1>Esse aqui é um teste para ver como ficará o site!</h1>
-            <a href="https://www.instagram.com/dclassemodamasculina/" target="_blank" class="main-btn">Correr no instagram</a>
+            <a href="https://www.instagram.com/dclassemodamasculina/" target="_blank" class="main-btn">Correr no
+              instagram</a>
           </div>
         </div>
 
@@ -125,8 +141,8 @@
       <p class="topic-objective">Nosso <strong>Objetivos</strong></p>
       <div class="row">
 
-        <div class="col-4 topics">
-          <img src="img/icones/lucro1.png">
+        <div class="col-4 topics" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img src="img/icones/missão1.png">
           <h2>Missão</h2>
           <p>
             Fascinar e envolver o mercado da moda masculina,
@@ -134,8 +150,8 @@
           </p>
         </div>
 
-        <div class="col-4 topics">
-          <img src="img/icones/lucro1.png">
+        <div class="col-4 topics" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <img src="img/icones/visão1.png">
           <h2>Visão</h2>
           <p>
             Ser destaque no segmento da moda oferecendo qualidade e conforto.
@@ -143,8 +159,8 @@
           <br>
         </div>
 
-        <div class="col-4 topics">
-          <img src="img/icones/lucro1.png">
+        <div class="col-4 topics" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="img/icones/valores1.png">
           <h2>Valores</h2>
           <p>
             Honestidade,<br> respeito e dedicação.
@@ -163,8 +179,8 @@
 
       <div class="row">
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom1.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <img src="img/modelimg/fotom10.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -174,8 +190,8 @@
         </div>
 
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom2.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <img src="img/modelimg/fotom20.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -185,8 +201,8 @@
         </div>
 
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom3.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="img/modelimg/fotom3.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -198,8 +214,8 @@
 
       <div class="row">
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom1.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <img src="img/modelimg/fotom1.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -209,8 +225,8 @@
         </div>
 
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom2.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <img src="img/modelimg/fotom25.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -220,8 +236,8 @@
         </div>
 
         <div class="col-lg-4 lbox">
-          <div class="box-img">
-            <img src="img/fotos/fotom3.jpeg">
+          <div class="box-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <img src="img/modelimg/fotom3.jpeg">
 
             <div class="text-img">
               <p>Dclasse</p>
@@ -242,20 +258,20 @@
     <div class="content">
       <div class="row">
 
-        <div class="col-lg-3 card-img-social">
-          <img src="img/fotos/fotom1.jpeg">
+        <div class="col-lg-3 card-img-social" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+          <img src="img/modelimg/fotom1.jpeg">
           <p>Modelo 1</p>
         </div>
-        <div class="col-lg-3 card-img-social">
-          <img src="img/fotos/fotom2.jpeg">
+        <div class="col-lg-3 card-img-social" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
+          <img src="img/modelimg/fotom2.jpeg">
           <p>Modelo 2</p>
         </div>
-        <div class="col-lg-3 card-img-social">
-          <img src="img/fotos/fotom3.jpeg">
+        <div class="col-lg-3 card-img-social" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="400">
+          <img src="img/modelimg/fotom3.jpeg">
           <p>Modelo 3</p>
         </div>
-        <div class="col-lg-3 card-img-social">
-          <img src="img/fotos/fotom4.jpeg">
+        <div class="col-lg-3 card-img-social" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+          <img src="img/modelimg/fotom4.jpeg">
           <p>Modelo 4</p>
         </div>
 
@@ -345,7 +361,11 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 

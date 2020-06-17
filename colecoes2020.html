@@ -13,6 +13,15 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<!-- BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
   var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -32,8 +41,7 @@
 
   <!-- Cabeçalho Site -->
   <header class="header_area">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #90181b;">
       <div class="img-header">
         <img class="" src="img/logo.png" alt="">
         <!-- <img class="img-fluid w-100" src="img/logotop.png" alt=""> -->
@@ -55,11 +63,17 @@
           <li class="nav-item">
             <a class="nav-link" href="cadastro.html">Cadastro Revenda</a>
           </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Coleções
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="colecoes2020.html">Coleção 2020</a>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="contato.html">Contato</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="colecoes.html">Coleções</a>
           </li>
         </ul>
       </div>
@@ -68,9 +82,12 @@
 
   <!-- Seção 1 QUEM SOMOS -->
 
-  <section class="container-history">
+  <section class="container-colection">
 
-    <img id="myImg" src="img/fotos/fotom1.jpeg" alt="Snow" style="width:100%;max-width:300px">
+    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
+    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
+    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
+    <img id="myImg" src="img/modelimg/fotom15.jpeg" alt="Snow" style="width:100%;max-width:300px">
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
