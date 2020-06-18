@@ -15,7 +15,7 @@ const submitNews = (event) => {
   const name = document.getElementById('inputName').value;
   const phone = document.getElementById('inputPhone').value;
   const headers = new Headers();
-  headers.append('access', 'e16ed094626ac8ab1bc3bc17ebc0b9ca');
+  headers.append('access', '862606f63fd08642df1d9679a86ea81d');
   headers.append('Content-Type', 'application/json');
   fetch('/api/news', { headers, method: 'POST', body: JSON.stringify({ name, phone }) })
     .then(res => res.json())
@@ -101,7 +101,7 @@ const submitContact = (event) => {
     const button = document.getElementById('buttonContact');
     handleLoading(button);
     const headers = new Headers();
-    headers.append('access', 'e16ed094626ac8ab1bc3bc17ebc0b9ca');
+    headers.append('access', '862606f63fd08642df1d9679a86ea81d');
     headers.append('Content-Type', 'application/json');
     fetch('/api/contact', { headers, method: 'POST', body: JSON.stringify({ name, email, phone, subject, message }) })
       .then(res => res.json())
@@ -134,7 +134,7 @@ const submitRegister = (event) => {
   const button = document.getElementById('formRegister').getElementsByTagName('button')[0];
   handleLoading(button);
   const headers = new Headers();
-  headers.append('access', 'e16ed094626ac8ab1bc3bc17ebc0b9ca');
+  headers.append('access', '862606f63fd08642df1d9679a86ea81d');
   headers.append('Content-Type', 'application/json');
   fetch(`/api/${type}`, { headers, method: 'POST', body: JSON.stringify(dataApi) })
     .then(res => res.json())

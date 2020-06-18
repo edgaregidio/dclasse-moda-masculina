@@ -5,55 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dclasse Moda Masculina</title>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/898bd1013b.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/5ee7cf754a7c6258179aa74b/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <script src="js/index.js"></script>
 </head>
 
-
-<script src="https://kit.fontawesome.com/898bd1013b.js" crossorigin="anonymous"></script>
-
-<!-- BOOTSTRAP -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/5ee7cf754a7c6258179aa74b/default';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-<!--End of Tawk.to Script-->
-
 <body>
-
-
   <!-- Cabeçalho Site -->
   <header class="header_area">
     <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #90181b;">
       <div class="img-header">
         <img class="" src="img/logo.png" alt="">
-        <!-- <img class="img-fluid w-100" src="img/logotop.png" alt=""> -->
       </div>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto w-100 justify-content-end">
           <li class="nav-item">
@@ -83,265 +73,206 @@
   </header>
 
   <section class="container-register">
-    <div class="nav-header">
+    <div class="nav-header" id="topRegister">
       <h2>Cadastro Revenda</h2>
     </div>
     <div class="content">
       <div class="row clearfix">
         <div class="offset-sm-2 col-sm-8">
-          <div>
+          <div class="form-row">
+            <div class="col form-group">
+              <label for="inputNome">Pessoa Jurídica ou Física? <span class="required">*</span></label>
+              <select class="form-control dadosGerais obrigatorio" id="selectTipoAtuacao" name="selectTipoAtuacao"
+                required onchange="handleFormAtuation()">
+                <option value="" disabled selected hidden>Escolha uma Opção</option>
+                <option value="Juridica" selected>Juridica</option>
+                <option value="Física">Física</option>
+              </select>
+            </div>
+          </div>
+          <form class="needs-validation" novalidate id="formRegister" onsubmit="submitRegister(event)">
+          </form>
 
-            <form class="needs-validation" novalidate>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Pessoa Jurídica ou Física? <span class="required">*</span></label>
-                  <select class="form-control dadosGerais obrigatorio" id="selectTipoAtuacao" name="selectTipoAtuacao"
-                    required>
-                    <option value="" disabled selected hidden>Escolha uma Opção</option>
-                    <option value="estudando">Juridica</option>
-                    <option value="advogando">Física</option>
-                  </select>
-                </div>
+          <div id="fieldsPF" style="display: none;">
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Nome <span class="required">*</span></label>
+                <input required name="name" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Nome <span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">CPF <span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="number"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>CPF <span class="required">*</span></label>
+                <input required name="cpf" type="number" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">RG<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="number"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Data de Nascimento<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="date"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>RG<span class="required">*</span></label>
+                <input required name="rg" type="number" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Endereço Completo (Rua, Qd, Lt. nº)<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Bairro <span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Data de Nascimento<span class="required">*</span></label>
+                <input required name="dateBirth" type="date" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Cidade <span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Estado <span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Endereço Completo (Rua, Qd, Lt. nº)<span class="required">*</span></label>
+                <input required name="address" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">CEP<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Celular/WhatsApp: (XX) XXXXX-XXXX <span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="tel"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Bairro <span class="required">*</span></label>
+                <input required name="neighborhood" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Cidade <span class="required">*</span></label>
+                <input required name="city" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Estado <span class="required">*</span></label>
+                <input required name="state" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>CEP<span class="required">*</span></label>
+                <input required name="cep" type="number" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col-6 form-group">
-                  <label for="inputNome">Email: Coloque seu melhor e-mail <span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="email"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Celular/WhatsApp: (XX) XXXXX-XXXX <span class="required">*</span></label>
+                <input required name="phone" type="tel" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row-button">
-                <button class="button-register" type="submit">Enviar</button>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 1<span class="required">*</span></label>
+                <input required name="ref1" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-            </form>
-
-
-            <!-- 
-            <form class="needs-validation" novalidate>
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Razão Social <span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">CNPJ<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="number"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 1<span class="required">*</span></label>
+                <input required name="telRef1" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Inscrição Estadual<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="number"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputNome">Endereço Completo (Rua, Qd, Lt. nº)<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 2</label>
+                <input name="ref2" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Bairro<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Cidade<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 2</label>
+                <input name="telRef2" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Estado <span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Nome para Contato<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 3</label>
+                <input name="ref3" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Celular/WhatsApp: (xx) xxxx-xxxx<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Email<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="tel"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 3</label>
+                <input name="telRef3" type="text" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
+            </div>
+            <div class="form-row">
+              <div class="col-6 form-group">
+                <label>Email: Coloque seu melhor e-mail <span class="required">*</span></label>
+                <input required name="email" type="email" class="form-control dadosGerais obrigatorio">
               </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col form-group">
-                  <label for="inputNome">Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputNome" name="inputNome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-                <div class="col form-group">
-                  <label for="inputSobrenome">Telefone Referência Comercial 1<span class="required">*</span></label>
-                  <input required id="inputSobrenome" name="inputSobrenome" type="text"
-                    class="form-control dadosGerais obrigatorio">
-                </div>
-              </div>
-
-              <div class="form-row-button">
-                  <button class="button-register" type="submit">Enviar</button>
-              </div>
-
-            </form> -->
-
+            </div>
+            <div class="form-row-button">
+              <button class="button-register" name="buttonRegister" type="submit">Finalizar Cadastro</button>
+            </div>
           </div>
 
+          <div id='fieldsPJ' style="display: none;">
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Razão Social <span class="required">*</span></label>
+                <input required name="reason" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>CNPJ<span class="required">*</span></label>
+                <input required name="cnpj" type="number" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Inscrição Estadual<span class="required">*</span></label>
+                <input required name="subscription" type="number" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Endereço Completo (Rua, Qd, Lt. nº)<span class="required">*</span></label>
+                <input required name="address" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Bairro<span class="required">*</span></label>
+                <input required name="neighborhood" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Cidade<span class="required">*</span></label>
+                <input required name="city" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Estado <span class="required">*</span></label>
+                <input required name="state" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Nome para Contato<span class="required">*</span></label>
+                <input required name="name" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Celular/WhatsApp: (xx) xxxx-xxxx<span class="required">*</span></label>
+                <input required name="phone" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Email<span class="required">*</span></label>
+                <input required name="email" type="tel" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 1<span class="required">*</span></label>
+                <input required name="ref1" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 1<span class="required">*</span></label>
+                <input required name="telRef1" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 2</span></label>
+                <input name="ref2" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 2</span></label>
+                <input name="telRef2" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label>Referência Comercial 3</span></label>
+                <input name="ref3" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+              <div class="col form-group">
+                <label>Telefone Referência Comercial 3</span></label>
+                <input name="telRef3" type="text" class="form-control dadosGerais obrigatorio">
+              </div>
+            </div>
+            <div class="form-row-button">
+              <button class="button-register" name="buttonRegister" type="submit">Finalizar Cadastro</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
     </div>
   </section>
 
@@ -470,7 +401,6 @@
           </li>
         </ul>
       </div>
-
       <div class="item">
         <input class="card-help" type="checkbox" id="check10">
         <label for="check10">
@@ -489,7 +419,6 @@
           </li>
         </ul>
       </div>
-
       <div class="item">
         <input class="card-help" type="checkbox" id="check11">
         <label for="check11">
@@ -505,7 +434,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </section>
 
@@ -524,13 +452,10 @@
     </div>
   </section>
 
-
   <!-- FOOTER -->
 
   <footer class="footer_area section_gap_top">
-
     <div class="container-footer">
-
       <div class="social_widget">
         <a href="https://www.facebook.com/dclassemodamasculina" target="_blank" class="facebook">
           <i href="https://www.facebook.com/dclassemodamasculina" target="_blank" class="fa fa-facebook"></i>
@@ -541,9 +466,7 @@
           <span>INSTAGRAM</span>
         </a>
       </div>
-
       <div class="row footer_inner">
-
         <div class="col-lg-4 col-sm-6">
           <div class="f_widget ab_widget">
             <div class="f_title">
@@ -559,21 +482,18 @@
             </ul>
           </div>
         </div>
-
         <div class="col-lg-4 col-sm-6">
           <div class="f_widget ab_widget">
             <h4>Receba Novidades!</h4>
-            <form class="form-footer">
+            <form class="form-footer needs-validation" onsubmit="submitNews(event)">
               <p>Nome Completo</p>
-
-              <input type="text" class="inputs-bottom" />
+              <input type="text" class="inputs-bottom" id='inputName' />
               <p>Telefone com DDD</p>
-              <input type="tel" class="inputs-bottom" />
-              <button class="button-bottom">Enviar</button>
+              <input type="tel" class="inputs-bottom" id='inputPhone' />
+              <button class="button-bottom" id='buttonNews'>Enviar</button>
             </form>
           </div>
         </div>
-
         <div class="col-lg-4 col-sm-6">
           <div class="f_widget ab_widget">
             <div class="f_title">
@@ -590,7 +510,6 @@
           </div>
         </div>
       </div>
-
       <div class="row single-footer-widget">
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="copy_right_text">
@@ -601,12 +520,33 @@
           </div>
         </div>
       </div>
-
     </div>
   </footer>
-
-
-
+  <script>
+    (function () {
+      'use strict';
+      document.getElementById('formRegister').innerHTML = document.getElementById('fieldsPJ').innerHTML;
+      window.addEventListener('load', function () {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+  <div id="toast">
+    <div id="snackbar"></div>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

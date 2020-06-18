@@ -11,7 +11,7 @@ class MailController {
     const { name, phone } = req.body;
     if (!name || !phone) {
       LogController.log('Invalid: Empty name or phone.');
-      return res.json({ success: false, message: 'Necessário preencher os campos de Nome Completo e Telefone' });
+      return res.json({ success: false, message: 'Necessário preencher os campos de Nome e Telefone' });
     }
     mail.options.subject = `${name} deseja receber novidades`;
     mail.options.html = templateNews(name, phone);
@@ -51,9 +51,9 @@ class MailController {
 
   registerPF(req, res) {
     const { name, cpf, rg, dateBirth, address, neighborhood, city, state, cep, phone, ref1, telRef1, ref2, telRef2, ref3, telRef3, email } = req.body;
-    if (!name || !cpf || !rg || !dateBirth || !address || !neighborhood || !city || !state || !cep || !phone || !ref1 || !telRef1 || !ref2 || !telRef2 || !ref3 || !telRef3 || !email) {
+    if (!name || !cpf || !rg || !dateBirth || !address || !neighborhood || !city || !state || !cep || !phone || !ref1 || !telRef1 || !email) {
       LogController.log('Invalid: Empty fields');
-      return res.json({ success: false, message: 'Necessário preencher todos os campos' });
+      return res.json({ success: false, message: 'Todos os campos com * são obrigatórios' });
     }
     if (!utils.isEmail(email)) {
       LogController.log('Invalid email');
@@ -69,18 +69,18 @@ class MailController {
     mail.transporter.sendMail(mail.options, (error, info) => {
       if (error) {
         LogController.log('Error sending register pf email: ' + error.toString());
-        return res.json({ success: false, message: 'Erro ao realizar cadastro' });
+        return res.json({ success: false, message: 'Ocorreu um erro ao realizar o cadastro de Pessoa Física' });
       }
       LogController.log(`Register pf email sent successfully: ${info.response}`);
-      return res.json({ success: true, message: 'Cadastro salvo com sucesso' });
+      return res.json({ success: true, message: 'Cadastro realizado com sucesso' });
     })
   }
 
   registerPJ(req, res) {
     const { reason, cnpj, subscription, name, address, neighborhood, city, state, phone, ref1, telRef1, ref2, telRef2, ref3, telRef3, email } = req.body;
-    if (!name || !reason || !cnpj || !subscription || !address || !neighborhood || !city || !state || !phone || !ref1 || !telRef1 || !ref2 || !telRef2 || !ref3 || !telRef3 || !email) {
+    if (!name || !reason || !cnpj || !subscription || !address || !neighborhood || !city || !state || !phone || !ref1 || !telRef1 || !email) {
       LogController.log('Invalid: Empty fields');
-      return res.json({ success: false, message: 'Necessário preencher todos os campos' });
+      return res.json({ success: false, message: 'Todos os campos com * são obrigatórios' });
     }
     if (!utils.isEmail(email)) {
       LogController.log('Invalid email');
@@ -92,10 +92,10 @@ class MailController {
     mail.transporter.sendMail(mail.options, (error, info) => {
       if (error) {
         LogController.log('Error sending register pj email: ' + error.toString());
-        return res.json({ success: false, message: 'Erro ao realizar cadastro' });
+        return res.json({ success: false, message: 'Ocorreu um erro ao realizar o cadastro de Pessoa Jurídica' });
       }
       LogController.log(`Register pf email sent successfully: ${info.response}`);
-      return res.json({ success: true, message: 'Cadastro salvo com sucesso' });
+      return res.json({ success: true, message: 'Cadastro realizado com sucesso' });
     })
   }
 

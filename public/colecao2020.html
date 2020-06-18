@@ -177,13 +177,12 @@
         <div class="col-lg-4 col-sm-6">
           <div class="f_widget ab_widget">
             <h4>Receba Novidades!</h4>
-            <form class="form-footer">
+            <form class="form-footer needs-validation" onsubmit="submitNews(event)">
               <p>Nome Completo</p>
-
-              <input type="text" class="inputs-bottom" />
+              <input type="text" class="inputs-bottom" id='inputName' />
               <p>Telefone com DDD</p>
-              <input type="tel" class="inputs-bottom" />
-              <button class="button-bottom">Enviar</button>
+              <input type="tel" class="inputs-bottom" id='inputPhone' />
+              <button class="button-bottom" id='buttonNews'>Enviar</button>
             </form>
           </div>
         </div>
