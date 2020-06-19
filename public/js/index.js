@@ -10,10 +10,11 @@ const toggleNavBar = () => {
 
 const submitNews = (event) => {
   event.preventDefault();
-  const button = document.getElementById('buttonNews');
-  handleLoading(button);
   const name = document.getElementById('inputName').value;
   const phone = document.getElementById('inputPhone').value;
+  if (!name || !phone) return toast('Necessário preencher os campos Nome e Telefone', 'error');
+  const button = document.getElementById('buttonNews');
+  handleLoading(button);
   const headers = new Headers();
   headers.append('access', '862606f63fd08642df1d9679a86ea81d');
   headers.append('Content-Type', 'application/json');
@@ -97,32 +98,31 @@ const submitContact = (event) => {
   const phone = document.getElementById('inputPhone').value;
   const subject = document.getElementById('inputSubject').value;
   const message = document.getElementById('inputMessage').value;
-  if (name && email && phone && subject && message) {
-    const button = document.getElementById('buttonContact');
-    handleLoading(button);
-    const headers = new Headers();
-    headers.append('access', '862606f63fd08642df1d9679a86ea81d');
-    headers.append('Content-Type', 'application/json');
-    fetch('/api/contact', { headers, method: 'POST', body: JSON.stringify({ name, email, phone, subject, message }) })
-      .then(res => res.json())
-      .then(res => {
-        if (res.success) {
-          document.getElementById('inputName').value = '';
-          document.getElementById('inputPhone').value = '';
-          document.getElementById('inputSubject').value = '';
-          document.getElementById('inputEmail').value = '';
-          document.getElementById('inputMessage').value = '';
-          const form = document.getElementById('formContact');
-          form.className = 'needs-validation';
-        }
-        const type = res.success ? 'success' : 'error';
-        toast(res.message, type);
-        handleLoading(button, false);
-      }).catch((err) => {
-        toast(err.toString(), 'error');
-        handleLoading(button, false);
-      })
-  }
+  if (!name || !email || !phone || !subject || !message) return toast('Necessário preencher todos os campos', 'error');
+  const button = document.getElementById('buttonContact');
+  handleLoading(button);
+  const headers = new Headers();
+  headers.append('access', '862606f63fd08642df1d9679a86ea81d');
+  headers.append('Content-Type', 'application/json');
+  fetch('/api/contact', { headers, method: 'POST', body: JSON.stringify({ name, email, phone, subject, message }) })
+    .then(res => res.json())
+    .then(res => {
+      if (res.success) {
+        document.getElementById('inputName').value = '';
+        document.getElementById('inputPhone').value = '';
+        document.getElementById('inputSubject').value = '';
+        document.getElementById('inputEmail').value = '';
+        document.getElementById('inputMessage').value = '';
+        const form = document.getElementById('formContact');
+        form.className = 'needs-validation';
+      }
+      const type = res.success ? 'success' : 'error';
+      toast(res.message, type);
+      handleLoading(button, false);
+    }).catch((err) => {
+      toast(err.toString(), 'error');
+      handleLoading(button, false);
+    });
 }
 
 const submitRegister = (event) => {
