@@ -784,6 +784,9 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .container-register .content {
+    width: 95% !important;
+  }
 }
 
 /* =========================== CONTATO PAGE =========================== */
@@ -883,6 +886,19 @@ body {
 
 .card-map iframe {
   height: 350px;
+}
+
+@media only screen and (max-width: 668px) {
+  #containerPhotos {
+    padding: 0 !important;
+  }
+  .container-contact .content {
+    width: 92% !important;
+  }
+  .navbar .img-header img {
+    width: 80px !important;
+    margin: 0 10px !important;
+  }
 }
 
 /*

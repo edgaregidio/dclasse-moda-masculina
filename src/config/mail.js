@@ -11,6 +11,6 @@ export default {
   }),
   options: {
     from: `${process.env.EMAIL_USER}`,
-    to: 'jeff.sifasam@gmail.com'
+    to: 'modamasculinadclasse@gmail.com'
   }
 }
