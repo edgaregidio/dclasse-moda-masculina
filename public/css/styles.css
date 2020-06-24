@@ -459,7 +459,9 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
+  .container-social .content {
+    overflow-x: hidden !important;
+  }
   .footer_area .container-footer .footer_inner {
     margin: 25px 0px 25px 0px !important;
   }
@@ -889,15 +891,33 @@ body {
 }
 
 @media only screen and (max-width: 668px) {
-  #containerPhotos {
-    padding: 0 !important;
-  }
   .container-contact .content {
     width: 92% !important;
   }
   .navbar .img-header img {
     width: 80px !important;
     margin: 0 10px !important;
+  }
+  .row-form {
+    margin: 0 !important;
+  }
+  .card-map {
+    width: 90% !important;
+    padding: 0px !important;
+  }
+  .img-card {
+    padding: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+  #formContact {
+    width: 90% !important;
+    padding: 30px 0px !important;
+  }
+  #formContact input,
+  #formContact select,
+  #formContact textarea {
+    width: 100% !important;
   }
 }
 
@@ -1027,6 +1047,9 @@ body {
   .prev,
   .next {
     padding: 8px;
+  }
+  #containerPhotos {
+    padding: 0 !important;
   }
 }
 
