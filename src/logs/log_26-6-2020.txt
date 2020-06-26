@@ -1,0 +1,45 @@
+26/6/2020 11:18:47 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:18:47 :: IP: ::1 || Method: POST || URL: /api/news
+26/6/2020 11:18:47 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:18:47 :: Body: {"name":"Teste","phone":"(12) 345678999"}
+26/6/2020 11:18:50 :: News email sent successfully: 250 2.0.0 OK  1593181130 k26sm9800320qtk.55 - gsmtp
+26/6/2020 11:22:42 :: IP: ::1 || Method: POST || URL: /api/contact
+26/6/2020 11:22:42 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:22:42 :: Body: {"name":"Teste Silva","email":"teste@email.com","phone":"(12) 312312312","subject":"Duvidas","message":"Testando formulário de contato"}
+26/6/2020 11:22:42 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:22:44 :: Contact  email sent successfully: 250 2.0.0 OK  1593181365 r76sm7952122qka.30 - gsmtp
+26/6/2020 11:28:19 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:28:19 :: IP: ::1 || Method: POST || URL: /api/registerpj
+26/6/2020 11:28:19 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:28:19 :: Body: {"reason":"Teste Razão Social","cnpj":"11.111.111/1111-11","subscription":"123456","address":"Rua teste","neighborhood":"Bairro teste","city":"Cidade teste","state":"Estado teste","name":"Nome p contato cadastro","phone":"(11) 111111111","email":"email@email.com","ref1":"","telRef1":"(12) 312312312","ref2":"","telRef2":"","ref3":"","telRef3":""}
+26/6/2020 11:28:19 :: Invalid: Empty fields
+26/6/2020 11:28:30 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:28:30 :: IP: ::1 || Method: POST || URL: /api/registerpj
+26/6/2020 11:28:30 :: Body: {"reason":"Teste Razão Social","cnpj":"11.111.111/1111-11","subscription":"123456","address":"Rua teste","neighborhood":"Bairro teste","city":"Cidade teste","state":"Estado teste","name":"Nome p contato cadastro","phone":"(11) 111111111","email":"email@email.com","ref1":"Referência 1","telRef1":"(12) 312312312","ref2":"","telRef2":"","ref3":"","telRef3":""}
+26/6/2020 11:28:30 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:28:32 :: Register pf email sent successfully: 250 2.0.0 OK  1593181712 z77sm8532181qka.59 - gsmtp
+26/6/2020 11:37:35 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:37:35 :: IP: ::1 || Method: POST || URL: /api/registerpf
+26/6/2020 11:37:35 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:37:35 :: Body: {"name":"Nome de teste","cpf":"111.111.111-11","rg":"123456","dateBirth":"2020-06-26","address":"Rua de teste","neighborhood":"bairro teste","city":"Cidade teste","state":"Estado teste","cep":"12312-312","phone":"(12) 121212121","ref1":"Ref 1","telRef1":"(12) 312312323","ref2":"","telRef2":"","ref3":"","telRef3":"","email":""}
+26/6/2020 11:37:35 :: Invalid: Empty fields
+26/6/2020 11:37:43 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:37:43 :: IP: ::1 || Method: POST || URL: /api/registerpf
+26/6/2020 11:37:43 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:37:43 :: Body: {"name":"Nome de teste","cpf":"111.111.111-11","rg":"123456","dateBirth":"2020-06-26","address":"Rua de teste","neighborhood":"bairro teste","city":"Cidade teste","state":"Estado teste","cep":"12312-312","phone":"(12) 121212121","ref1":"Ref 1","telRef1":"(12) 312312323","ref2":"","telRef2":"","ref3":"","telRef3":"","email":"email@email.com"}
+26/6/2020 11:37:43 :: Invalid CPF
+26/6/2020 11:37:48 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:37:48 :: IP: ::1 || Method: POST || URL: /api/registerpf
+26/6/2020 11:37:48 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:37:48 :: Body: {"name":"Nome de teste","cpf":"111.111.111-11","rg":"123456","dateBirth":"2020-06-26","address":"Rua de teste","neighborhood":"bairro teste","city":"Cidade teste","state":"Estado teste","cep":"12312-312","phone":"(12) 121212121","ref1":"Ref 1","telRef1":"(12) 312312323","ref2":"","telRef2":"","ref3":"","telRef3":"","email":"email@email.com"}
+26/6/2020 11:37:48 :: Invalid CPF
+26/6/2020 11:37:51 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:37:51 :: IP: ::1 || Method: POST || URL: /api/registerpf
+26/6/2020 11:37:51 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:37:51 :: Body: {"name":"Nome de teste","cpf":"111.111.111-11","rg":"123456","dateBirth":"2020-06-26","address":"Rua de teste","neighborhood":"bairro teste","city":"Cidade teste","state":"Estado teste","cep":"12312-312","phone":"(12) 121212121","ref1":"Ref 1","telRef1":"(12) 312312323","ref2":"","telRef2":"","ref3":"","telRef3":"","email":"email@email.com"}
+26/6/2020 11:37:51 :: Invalid CPF
+26/6/2020 11:38:07 :: ==================================== NEW REQUEST ================================
+26/6/2020 11:38:07 :: IP: ::1 || Method: POST || URL: /api/registerpf
+26/6/2020 11:38:07 :: Headers: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+26/6/2020 11:38:07 :: Body: {"name":"Nome de teste","cpf":"258.599.230-66","rg":"123456","dateBirth":"2020-06-26","address":"Rua de teste","neighborhood":"bairro teste","city":"Cidade teste","state":"Estado teste","cep":"12312-312","phone":"(12) 121212121","ref1":"Ref 1","telRef1":"(12) 312312323","ref2":"","telRef2":"","ref3":"","telRef3":"","email":"email@email.com"}
+26/6/2020 11:38:10 :: Register pf email sent successfully: 250 2.0.0 OK  1593182290 b7sm7687363qkl.18 - gsmtp

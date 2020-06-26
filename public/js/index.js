@@ -3,6 +3,11 @@ var arrayImages = [];
 var currentIndexImage = null;
 var modalActive = false;
 
+$(document).ready(() => {
+  $('#inputPhone').mask('(00) 000000000');
+  $('#inputPhoneForm').mask('(00) 000000000');
+});
+
 const toggleNavBar = () => {
   const navBar = document.getElementById('navbarText');
   navBar.style.display = !navBar.style.display || (navBar.style.display === 'none') ? 'flex' : 'none';
@@ -95,7 +100,7 @@ const submitContact = (event) => {
   event.preventDefault();
   const name = document.getElementById('inputName').value;
   const email = document.getElementById('inputEmail').value;
-  const phone = document.getElementById('inputPhone').value;
+  const phone = document.getElementById('inputPhoneForm').value;
   const subject = document.getElementById('inputSubject').value;
   const message = document.getElementById('inputMessage').value;
   if (!name || !email || !phone || !subject || !message) return toast('Necessário preencher todos os campos', 'error');
@@ -157,6 +162,16 @@ const handleFormAtuation = () => {
   const type = document.getElementById('selectTipoAtuacao').value;
   const fields = type === 'Juridica' ? document.getElementById('fieldsPJ').innerHTML : document.getElementById('fieldsPF').innerHTML;
   document.getElementById('formRegister').innerHTML = fields;
+  if (type === 'Juridica') {
+    $('#formRegister input[name="cnpj"]').mask('00.000.000/0000-00', { reverse: true });
+  } else {
+    $('#formRegister input[name="cpf"]').mask('000.000.000-00', { reverse: true });
+    $('#formRegister input[name="cep"]').mask('00000-000');
+  }
+  $('#formRegister input[name="phone"]').mask('(00) 000000000');
+  $('#formRegister input[name="telRef1"]').mask('(00) 000000000');
+  $('#formRegister input[name="telRef2"]').mask('(00) 000000000');
+  $('#formRegister input[name="telRef3"]').mask('(00) 000000000');
 }
 
 const handleLoading = (button, show = true) => {
