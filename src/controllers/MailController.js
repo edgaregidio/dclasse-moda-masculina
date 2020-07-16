@@ -63,7 +63,7 @@ class MailController {
       LogController.log('Invalid CPF');
       return res.json({ success: false, message: 'O CPF informado é inválido' });
     }
-    mail.options.subject = `Novo Cadastro CPF`;
+    mail.options.subject = `Novo Cadastro CPF - ${name}`;
     mail.options.html = templatePhysicalPerson(name, cpf, rg, dateBirth, address, neighborhood, city, state, cep, phone, ref1, telRef1, ref2, telRef2, ref3, telRef3, email);
     mail.transporter.close();
     mail.transporter.sendMail(mail.options, (error, info) => {
@@ -86,7 +86,7 @@ class MailController {
       LogController.log('Invalid email');
       return res.json({ success: false, message: 'O email informado é inválido' });
     }
-    mail.options.subject = `Novo Cadastro CNPJ`;
+    mail.options.subject = `Novo Cadastro CNPJ - ${name}`;
     mail.options.html = templateJuridicPerson(name, reason, cnpj, subscription, address, neighborhood, city, state, phone, ref1, telRef1, ref2, telRef2, ref3, telRef3, email);
     mail.transporter.close();
     mail.transporter.sendMail(mail.options, (error, info) => {
