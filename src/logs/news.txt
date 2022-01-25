@@ -1,0 +1,2 @@
+{"level":"info","message":"{\"name\":\"Teste\",\"phone\":\"(11) 111111111\"}"}
+{"level":"info","message":"News email sent successfully: 250 2.0.0 OK  1643133181 s18sm2945042oog.47 - gsmtp"}

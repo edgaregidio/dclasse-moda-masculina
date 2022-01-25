@@ -5,5 +5,5 @@ const templateNews = (name, phone) => `
     <b>Nome: ${name}<br>Telefone: ${phone}</b>
   </p>
 </div>
-`
-export default templateNews
+`;
+module.exports = templateNews;

@@ -1,4 +1,21 @@
-const templatePhysicalPerson = (name, reason, cnpj, subscription, address, neighborhood, city, state, phone, ref1, telRef1, ref2, telRef2, ref3, telRef3, email) => `
+const templatePhysicalPerson = (
+  name,
+  reason,
+  cnpj,
+  subscription,
+  address,
+  neighborhood,
+  city,
+  state,
+  phone,
+  ref1,
+  telRef1,
+  ref2,
+  telRef2,
+  ref3,
+  telRef3,
+  email
+) => `
 <div style="background-color: #90181B; padding: 30px; color: #FFFFFF">
   <h2>${name} acabou de cadastrar-se na plataforma</h2>
   <p style="color: #FFFFFF">
@@ -10,5 +27,5 @@ const templatePhysicalPerson = (name, reason, cnpj, subscription, address, neigh
     </b>
   </p>
 </div>
-`
-export default templatePhysicalPerson
+`;
+module.exports = templatePhysicalPerson;

@@ -5,5 +5,5 @@ const templateContact = (name, email, phone, subject, message) => `
     <b>Nome: ${name}<br>Email: ${email}<br>Telefone: ${phone}<br>Assunto: ${subject}<br>Mensagem: ${message}</b>
   </p>
 </div>
-`
-export default templateContact
+`;
+module.exports = templateContact;

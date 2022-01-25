@@ -1,16 +1,15 @@
-import nodemailer from 'nodemailer';
-import 'dotenv/config';
+const nodemailer = require("nodemailer");
 
-export default {
+module.exports = {
   transporter: nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
-      user: `${process.env.EMAIL_USER}`,
-      pass: `${process.env.EMAIL_PASS}`
-    }
+      user: `evolutiwmenvios@gmail.com`,
+      pass: `ev0lut1@2019`,
+    },
   }),
   options: {
-    from: `${process.env.EMAIL_USER}`,
-    to: 'modamasculinadclasse@gmail.com'
-  }
-}
+    from: `evolutiwmenvios@gmail.com`,
+    to: "delicatejeanscontato@gmail.com",
+  },
+};
