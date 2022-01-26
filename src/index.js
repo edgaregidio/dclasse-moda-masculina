@@ -35,4 +35,4 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.listen(21200 || 3000, () => console.log("Server Running"));
+app.listen(21252 || 3000, () => console.log("Server Running"));
